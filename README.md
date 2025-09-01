@@ -45,8 +45,8 @@ This core is designed to be the **foundation layer** of kernery, ensuring consis
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/your-org/kernery-core.git
-   cd kernery-core
+   git clone https://github.com/Kernery/core.git
+   cd core
 
 2. **Install Dependencies**  
    ```bash
