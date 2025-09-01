@@ -1,0 +1,31 @@
+{
+    "name": "kernery/core",
+    "description": "Open source framework built on laravel with extensible battery included.",
+    "keywords": [
+        "laravel",
+        "kernery",
+        "php",
+        "laravel kernery"
+    ],
+    "homepage": "https://kernery.com",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kernery",
+            "email": "hello@kernery.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {}
+    },
+    "extra": {
+        "laravel": {
+            "providers": []
+        },
+        "aliases": {}
+    }
+}
