@@ -33,5 +33,14 @@
             "providers": []
         },
         "aliases": {}
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../core",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
 }
