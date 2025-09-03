@@ -34,13 +34,11 @@
         },
         "aliases": {}
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../core",
-            "options": {
-                "symlink": true
-            }
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "wikimedia/composer-merge-plugin": true
         }
-    ]
+    }
 }
