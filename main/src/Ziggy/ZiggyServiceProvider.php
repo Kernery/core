@@ -1,6 +1,6 @@
 <?php
 
-namespace Tightenco\Ziggy;
+namespace Kernery\Main\Ziggy;
 
 use Tighten\Ziggy\ZiggyServiceProvider as ZiggyMainServiceProvider;
 

@@ -28,7 +28,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Kernery\\Main\\": "main/src"
+            "Kernery\\Main\\": "main/src",
+            "Tightenco\\Ziggy\\": "main/src/Ziggy"
         }
     },
     "extra": {
