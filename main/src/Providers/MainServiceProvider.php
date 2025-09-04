@@ -2,9 +2,6 @@
 
 namespace Kernery\Main\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use Kernery\Main\Supports\ServiceProvider;
 
-class MainServiceProvider extends ServiceProvider
-{
-
-}
+class MainServiceProvider extends ServiceProvider {}
