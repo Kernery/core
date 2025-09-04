@@ -1,4 +1,6 @@
-# Kernery Core  
+<div align="center">
+  <img src="/kernery/core/blob/main/art/kernery-logo-full-no-bg.png" alt="Kernery Logo" height="300">
+</div>
 
 The **Kernery** package contains all the essential files and functionality that power the entire kernery ecosystem — from the **dashboard** and **media management** to extensible batteries-included modules.  
 
