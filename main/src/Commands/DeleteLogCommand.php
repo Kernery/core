@@ -22,6 +22,7 @@ class DeleteLogCommand extends Command
         if (empty($allLogs)) {
 
             $this->components->info('❌ No logs file found');
+
             return self::SUCCESS;
 
         }

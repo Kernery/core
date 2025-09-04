@@ -27,13 +27,19 @@
         "barryvdh/laravel-debugbar": "3.16.0"
     },
     "autoload": {
-        "psr-4": {}
+        "psr-4": {
+            "Kernery\\Main\\": "main/src"
+        }
     },
     "extra": {
         "laravel": {
-            "providers": []
+            "providers": [
+                "Kernery\\Main\\Support\\ServiceProvider"
+            ]
         },
-        "aliases": {}
+        "aliases": {
+
+        }
     },
     "config": {
         "sort-packages": true,
