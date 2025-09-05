@@ -3,6 +3,7 @@
 namespace Kernery\Main\Casts;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
+use Kernery\Main\Facades\AppHelper;
 
 class SecureJson implements CastsAttributes
 {
@@ -11,7 +12,7 @@ class SecureJson implements CastsAttributes
      */
     public function set($model, string $key, $value, array $attributes): bool | string
     {
-        return json_encode($value);
+        return AppHelper::sanitizeJson( $value );
     }
 
     /**
@@ -19,6 +20,6 @@ class SecureJson implements CastsAttributes
      */
     public function get($model, string $key, $value, array $attributes): mixed
     {
-        return json_decode($value, true);
+        return json_decode(AppHelper::sanitizeJson( $value ) );
     }
 }
