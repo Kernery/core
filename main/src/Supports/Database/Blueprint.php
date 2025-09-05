@@ -1,16 +1,16 @@
 <?php
 
 namespace Kernery\Main\Supports\Database;
-use Illuminate\Database\Schema\Blueprint as LaravelBlueprint;
+
 use Closure;
 use Illuminate\Database\Connection;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Schema\Blueprint as LaravelBlueprint;
 use Illuminate\Database\Schema\ColumnDefinition;
+use Illuminate\Support\Facades\DB;
 
 class Blueprint extends LaravelBlueprint
 {
-
-    public function __construct(Connection $connection, $table, Closure $callback = null)
+    public function __construct(Connection $connection, $table, ?Closure $callback = null)
     {
         // This constructor extends the parent DB class and adds a safeguard so Kernery migrations won’t fail on MySQL servers that enforce primary keys on all tables.
 
