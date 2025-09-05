@@ -37,7 +37,8 @@
         "laravel": {
             "providers": [
                 "Kernery\\Main\\Supports\\ServiceProvider",
-                "Kernery\\Main\\Providers\\MainServiceProvider"
+                "Kernery\\Main\\Providers\\MainServiceProvider",
+                "Kernery\\Main\\Providers\\CommandServiceProvider"
             ]
         },
         "aliases": {
@@ -45,8 +46,6 @@
         }
     },
     "config": {
-        "sort-packages": true,
-        "preferred-install": "dist",
         "allow-plugins": {
             "wikimedia/composer-merge-plugin": true
         }
