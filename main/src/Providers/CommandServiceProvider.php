@@ -20,7 +20,7 @@ class CommandServiceProvider extends ServiceProvider
 
         AboutCommand::add('Kernery Core Information', fn() => [
             'Core version' => '0.3.0',
-            'App version' => env('APP_VERSION', '1.0.0');
-        ])
+            'App version' => env('APP_VERSION', '1.0.0')
+        ]);
     }
 }
