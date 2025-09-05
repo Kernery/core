@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use ReflectionClass;
 
-trait HandlePublishDataTrait
+trait LoadAndPublishDataTrait
 {
     protected ?string $namespace = null;
 
@@ -158,5 +158,12 @@ trait HandlePublishDataTrait
     protected function getAssetsPath(): string
     {
         return $this->getPath('public');
+    }
+
+    protected function loadHelpers(): self
+    {
+        $this->getPath('/helpers');
+
+        return $this;
     }
 }
