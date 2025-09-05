@@ -12,7 +12,7 @@ class SecureJson implements CastsAttributes
      */
     public function set($model, string $key, $value, array $attributes): bool | string
     {
-        return AppHelper::sanitizeJson( $value );
+        return AppHelper::sanitizeJson($value);
     }
 
     /**
@@ -20,6 +20,6 @@ class SecureJson implements CastsAttributes
      */
     public function get($model, string $key, $value, array $attributes): mixed
     {
-        return json_decode(AppHelper::sanitizeJson( $value ) );
+        return json_decode(AppHelper::sanitizeJson($value));
     }
 }
