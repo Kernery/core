@@ -29,17 +29,19 @@
     "autoload": {
         "psr-4": {
             "Kernery\\Main\\": "main/src",
-            "Tightenco\\Ziggy\\": "main/src/Ziggy"
+            "Tightenco\\Ziggy\\": "main/src/Ziggy",
+            "Kernery\\Main\\Tests\\": "main/tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Kernery\\Main\\Support\\ServiceProvider"
+                "Kernery\\Main\\Supports\\ServiceProvider",
+                "Kernery\\Main\\Providers\\MainServiceProvider"
             ]
         },
         "aliases": {
-
+            "AppHelper": "Kernery\\Main\\Facades\\AppHelper"
         }
     },
     "config": {
