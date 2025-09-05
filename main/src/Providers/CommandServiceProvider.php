@@ -10,7 +10,7 @@ class CommandServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        if (!$this->app->runningInConsole()) {
+        if (! $this->app->runningInConsole()) {
             return;
         }
 
@@ -18,9 +18,9 @@ class CommandServiceProvider extends ServiceProvider
             DeleteLogCommand::class,
         ]);
 
-        AboutCommand::add('Kernery Core Information', fn() => [
+        AboutCommand::add('Kernery Core Information', fn () => [
             'Core version' => '0.3.0',
-            'App version' => env('APP_VERSION', '1.0.0')
+            'App version' => env('APP_VERSION', '1.0.0'),
         ]);
     }
 }

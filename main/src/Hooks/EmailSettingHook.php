@@ -2,7 +2,8 @@
 
 namespace Kernery\Main\Hooks;
 
-class EmailSettingHook {
+class EmailSettingHook
+{
     public static function addSettingsToEmailTemplate()
     {
         $templates = '';

@@ -11,7 +11,7 @@ trait HasTreeStep
         static::upsert($tree, ['id', 'name'], ['parent_id', 'order']);
     }
 
-    protected static function flatTree(array $data, array &$tree = [], string|int $parentId = 0): array
+    protected static function flatTree(array $data, array &$tree = [], string | int $parentId = 0): array
     {
         foreach ($data as $order => $item) {
             $tree[] = [
@@ -21,7 +21,7 @@ trait HasTreeStep
                 'parent_id' => $parentId,
             ];
 
-            if (!empty($item['children'])) {
+            if (! empty($item['children'])) {
                 static::flatTree($item['children'], $tree, $item['id']);
             }
         }
