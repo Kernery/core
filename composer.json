@@ -30,7 +30,8 @@
         "psr-4": {
             "Kernery\\Main\\": "main/src",
             "Tightenco\\Ziggy\\": "main/src/Ziggy",
-            "Kernery\\Main\\Tests\\": "main/tests"
+            "Kernery\\Main\\Tests\\": "main/tests",
+            "Kernery\\Icon\\": "icon/src"
         }
     },
     "extra": {
@@ -38,11 +39,13 @@
             "providers": [
                 "Kernery\\Main\\Supports\\ServiceProvider",
                 "Kernery\\Main\\Providers\\MainServiceProvider",
-                "Kernery\\Main\\Providers\\CommandServiceProvider"
+                "Kernery\\Main\\Providers\\CommandServiceProvider",
+                "Kernery\\Icon\\Providers\\IconServiceProvider"
             ]
         },
         "aliases": {
-            "AppHelper": "Kernery\\Main\\Facades\\AppHelper"
+            "AppHelper": "Kernery\\Main\\Facades\\AppHelper",
+            "AppIcon": "Kernery\\Icon\\Facades\\Icon"
         }
     },
     "config": {
