@@ -18,11 +18,12 @@ class IconServiceProvider extends ServiceProvider
             ->loadAndPublishConfigs('icon');
     }
 
-    public function boot(): void {
+    public function boot(): void
+    {
 
         $aliasLoader = AliasLoader::getInstance();
 
-        if (!class_exists('AppIcon')) {
+        if (! class_exists('AppIcon')) {
             $aliasLoader->alias('AppIcon', IconFacade::class);
         }
     }
