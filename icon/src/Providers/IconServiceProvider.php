@@ -15,14 +15,15 @@ class IconServiceProvider extends ServiceProvider
     {
         $this
             ->setNamespace('core/icon')
-            ->loadAndPublishConfigs('icon');
+            ->loadAndPublishConfigs('global');
     }
 
-    public function boot(): void {
+    public function boot(): void
+    {
 
         $aliasLoader = AliasLoader::getInstance();
 
-        if (!class_exists('AppIcon')) {
+        if (! class_exists('AppIcon')) {
             $aliasLoader->alias('AppIcon', IconFacade::class);
         }
     }

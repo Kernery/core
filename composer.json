@@ -21,7 +21,8 @@
     "require": {
         "kernery/asset": "*@dev",
         "wikimedia/composer-merge-plugin": "^2.1.0",
-        "tightenco/ziggy": "2.5.3"
+        "tightenco/ziggy": "2.5.3",
+        "kris/laravel-form-builder": "^1.54.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "3.16.0"
@@ -31,7 +32,8 @@
             "Kernery\\Main\\": "main/src",
             "Tightenco\\Ziggy\\": "main/src/Ziggy",
             "Kernery\\Main\\Tests\\": "main/tests",
-            "Kernery\\Icon\\": "icon/src"
+            "Kernery\\Icon\\": "icon/src",
+            "Kernery\\Form\\": "form/src"
         }
     },
     "extra": {
@@ -40,7 +42,8 @@
                 "Kernery\\Main\\Supports\\ServiceProvider",
                 "Kernery\\Main\\Providers\\MainServiceProvider",
                 "Kernery\\Main\\Providers\\CommandServiceProvider",
-                "Kernery\\Icon\\Providers\\IconServiceProvider"
+                "Kernery\\Icon\\Providers\\IconServiceProvider",
+                "Kernery\\Form\\Providers\\FormServiceProvider"
             ]
         },
         "aliases": {
