@@ -6,7 +6,7 @@ use Exception;
 
 class PropertyNotFoundException extends Exception
 {
-    public function __construct(string $property = '', $caller = '', Exception $previous = null)
+    public function __construct(string $property = '', $caller = '', ?Exception $previous = null)
     {
         $message = '"' . $property . '" not found in "' . $caller . '" object';
 

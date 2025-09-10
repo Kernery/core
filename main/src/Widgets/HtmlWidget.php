@@ -2,7 +2,4 @@
 
 namespace Kernery\Main\Widgets;
 
-abstract class HtmlWidget extends Widget
-{
-
-}
+abstract class HtmlWidget extends Widget {}

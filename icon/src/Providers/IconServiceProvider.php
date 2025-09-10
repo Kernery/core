@@ -15,7 +15,7 @@ class IconServiceProvider extends ServiceProvider
     {
         $this
             ->setNamespace('core/icon')
-            ->loadAndPublishConfigs('icon');
+            ->loadAndPublishConfigs('global');
     }
 
     public function boot(): void
