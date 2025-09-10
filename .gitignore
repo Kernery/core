@@ -2,3 +2,12 @@ Thumbs.db
 .DS_Store
 __MACOSX
 .phpunit.result.cache
+/auth/wbpack.mix.js
+/js-validation/webpack.mix.js
+/dashboard/webpack.mix.js
+/form/webpack.mix.js
+/main/webpack.mix.js
+/setting/webpack.mix.js
+/media/webpack.mix.js
+/table/webpack.mix.js
+/support/webpack.mix.js
