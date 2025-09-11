@@ -2,7 +2,7 @@
 
 namespace Kernery\Main\Supports;
 
-class Action extends ActionHookEvent
+class HookAction extends ActionHookEvent
 {
     public function fire(string $action, array $args): void
     {

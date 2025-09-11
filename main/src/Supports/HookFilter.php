@@ -2,7 +2,7 @@
 
 namespace Kernery\Main\Supports;
 
-class Filter extends ActionHookEvent
+class HookFilter extends ActionHookEvent
 {
     public function fire(string $action, array $args)
     {
