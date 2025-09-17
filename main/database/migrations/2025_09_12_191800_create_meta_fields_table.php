@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('meta_boxes', function (Blueprint $table) {
+        Schema::create('meta_fields', function (Blueprint $table) {
             $table->id();
             $table->foreignId('reference_id')->index();
             $table->string('reference_type', 120);
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('meta_boxes');
+        Schema::dropIfExists('meta_fields');
     }
 };

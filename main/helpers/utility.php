@@ -1,6 +1,6 @@
 <?php
 
-const CORE_V = '0.8.0';
+const CORE_V = '0.1.0';
 
 if (! function_exists('get_core_version')) {
     function get_core_version(): string
