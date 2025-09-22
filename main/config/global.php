@@ -27,15 +27,15 @@ return [
     'report_app_error' => [
         'channel' => [
             'via_slack' => env('SLACK_REPORTING_ENABLED', false),
-            'via_email' => env('EMAIL_REPORTING_ENABLED', false)
+            'via_email' => env('EMAIL_REPORTING_ENABLED', false),
         ],
         'ignore_bots' => [
             'slurp',
             'bingbot',
-            'googlebot'
-        ]
+            'googlebot',
+        ],
     ],
     'app_text_editor' => [
-        
-    ]
+
+    ],
 ];
