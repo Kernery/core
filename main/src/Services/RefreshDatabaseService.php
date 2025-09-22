@@ -17,7 +17,7 @@ class RefreshDatabaseService
 
     public function executeService(array $exclude = [])
     {
-        $exclude = array_merge(...$exclude, $this->ignoreTables());
+        $exclude = array_merge($exclude, $this->ignoreTables());
 
         try {
 
