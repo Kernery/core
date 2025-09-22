@@ -31,7 +31,6 @@ class AppHelper
             return $dirty_value;
         }
 
-        // If value is already an array → sanitize recursively
         if (is_array($dirty_value)) {
             return array_map(fn ($v) => $this->sanitize($v, $config), $dirty_value);
         }
