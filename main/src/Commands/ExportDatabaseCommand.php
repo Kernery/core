@@ -86,6 +86,6 @@ class ExportDatabaseCommand extends Command
 
     protected function configure()
     {
-        $this->addOption('force', 'f', null, 'Export database without confirmation.');
+        $this->addOption('force', '--f', null, 'Export database without confirmation.');
     }
 }

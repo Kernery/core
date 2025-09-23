@@ -34,6 +34,6 @@ class RefreshAppCommand extends Command
 
     protected function configure()
     {
-        $this->addOption('force', 'f', null, 'Refresh app without confirmation.');
+        $this->addOption('force', '--f', null, 'Refresh app without confirmation.');
     }
 }
