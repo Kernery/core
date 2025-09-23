@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 class DatabaseOperation
 {
-    public static function loadSqlFromPath(string $pathToSqlFile, string $connection = null)
+    public static function loadSqlFromPath(string $pathToSqlFile, ?string $connection = null)
     {
         DB::purge($connection);
         DB::connection()->setDatabaseName(DB::getDatabaseName());

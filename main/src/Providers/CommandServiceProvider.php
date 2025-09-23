@@ -19,7 +19,7 @@ class CommandServiceProvider extends ServiceProvider
         $this->commands([
             DeleteLogCommand::class,
             ExportDatabaseCommand::class,
-            RefreshAppCommand::class
+            RefreshAppCommand::class,
         ]);
 
         AboutCommand::add('About Kernery', fn () => [

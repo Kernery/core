@@ -10,7 +10,6 @@ use Kernery\Main\Supports\DatabaseOperation;
 
 class ImportDatabaseCommand extends Command
 {
-
     public function handle()
     {
         AppHelper::executeMaximumAndMemoryLimit();
@@ -26,7 +25,7 @@ class ImportDatabaseCommand extends Command
             $filepath = db_path($filename);
         }
 
-        if (!File::exists($filepath)) {
+        if (! File::exists($filepath)) {
 
             $this->components->error('The Database SQL file not found.');
 
@@ -42,11 +41,11 @@ class ImportDatabaseCommand extends Command
             case 'mysql':
                 $this->components->task(
                     'Importing database from SQL file path',
-                    fn() => DatabaseOperation::loadSqlFromPath($filepath)
+                    fn () => DatabaseOperation::loadSqlFromPath($filepath)
                 );
 
                 return self::SUCCESS;
-                
+
             case 'mariadb':
 
             case 'pgsql':
@@ -57,8 +56,5 @@ class ImportDatabaseCommand extends Command
         return self::FAILURE;
     }
 
-    protected function configure()
-    {
-
-    }
+    protected function configure() {}
 }
