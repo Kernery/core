@@ -22,8 +22,8 @@ class CommandServiceProvider extends ServiceProvider
             RefreshAppCommand::class
         ]);
 
-        AboutCommand::add('Kernery Core Information', fn () => [
-            'Core version' => '0.1.0',
+        AboutCommand::add('About Kernery', fn () => [
+            'Core version' => app_core_version(),
             'App version' => env('APP_VERSION', '0.1.0'),
         ]);
     }
