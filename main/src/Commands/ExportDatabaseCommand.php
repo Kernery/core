@@ -12,7 +12,7 @@ use function Laravel\Prompts\confirm;
 #[AsCommand('kernery:db:export', 'Export application database to SQL file within the app.')]
 class ExportDatabaseCommand extends Command
 {
-    public function handle()
+    public function handle(): int
     {
         try {
 
@@ -84,7 +84,7 @@ class ExportDatabaseCommand extends Command
         return self::SUCCESS;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this->addOption('force', '--f', null, 'Export database without confirmation.');
     }

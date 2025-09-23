@@ -12,7 +12,7 @@ use function Laravel\Prompts\confirm;
 #[AsCommand('kernery:app:refresh', 'Cleanup all records from the database except core system records needed to keep the app running.')]
 class RefreshAppCommand extends Command
 {
-    public function handle(RefreshDatabaseService $refreshDatabaseService)
+    public function handle(RefreshDatabaseService $refreshDatabaseService): int
     {
         try {
 
@@ -30,9 +30,11 @@ class RefreshAppCommand extends Command
 
             $this->components->error($exception->getMessage());
         }
+
+        return self::SUCCESS;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this->addOption('force', '--f', null, 'Refresh app without confirmation.');
     }
