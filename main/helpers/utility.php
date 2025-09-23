@@ -9,7 +9,7 @@ if (! function_exists('app_core_version')) {
     }
 }
 
-if (! function_exists('app_source_path')) {
+if (! function_exists('source_path')) {
     function source_path(?string $path = null): string
     {
         $path = ltrim($path, DIRECTORY_SEPARATOR);
@@ -29,5 +29,12 @@ if (! function_exists('module_path')) {
     function module_path(?string $path = null): string
     {
         return source_path('modules' . ($path ? DIRECTORY_SEPARATOR . ltrim($path, DIRECTORY_SEPARATOR) : ''));
+    }
+}
+
+if (! function_exists('db_path')) {
+    function db_path(?string $path = null): string
+    {
+        return source_path('db' . ($path ? DIRECTORY_SEPARATOR . ltrim($path, DIRECTORY_SEPARATOR) : ''));
     }
 }
