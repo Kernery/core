@@ -26,7 +26,9 @@ class RefreshAppCommand extends Command
 
         } catch (Exception $exception) {
 
-            $this->components->error('Error', $exception->getMessage());
+            $this->components->error('Error during app refresh');
+
+            $this->components->error($exception->getMessage());
         }
     }
 
