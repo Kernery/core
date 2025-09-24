@@ -5,9 +5,8 @@ namespace Kernery\Main\Commands;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\Process\Process;
 use Symfony\Component\Console\Attribute\AsCommand;
-
+use Symfony\Component\Process\Process;
 use function Laravel\Prompts\confirm;
 
 #[AsCommand('kernery:db:export', 'Export application database to SQL file within the app.')]

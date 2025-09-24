@@ -18,6 +18,8 @@ class MainServiceProvider extends ServiceProvider
             ->loadHelpers();
 
         $this->prepareMissingAliases();
+
+        $this->app->singleton('core.app-fonts', AppFont::class);
     }
 
     public function boot(): void {}

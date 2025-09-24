@@ -6,7 +6,6 @@ use Exception;
 use Illuminate\Console\Command;
 use Kernery\Main\Services\RefreshDatabaseService;
 use Symfony\Component\Console\Attribute\AsCommand;
-
 use function Laravel\Prompts\confirm;
 
 #[AsCommand('kernery:app:refresh', 'Cleanup all records from the database except the core system records that is needed to keep the app running.')]

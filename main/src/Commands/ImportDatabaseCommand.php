@@ -8,13 +8,13 @@ use Illuminate\Support\Facades\File;
 use Kernery\Main\Helpers\AppHelper;
 use Kernery\Main\Services\FlushCacheService;
 use Kernery\Main\Supports\DatabaseOperation;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Console\Input\InputArgument;
 
 #[AsCommand('kernery:db:import', 'Import database from SQL file in path.')]
 class ImportDatabaseCommand extends Command
 {
-    public function handle()
+    public function handle(): int
     {
         AppHelper::executeMaximumAndMemoryLimit();
 
@@ -46,7 +46,7 @@ class ImportDatabaseCommand extends Command
 
                 $this->components->task(
                     'Importing database from SQL file path',
-                    fn () => DatabaseOperation::loadSqlFromPath($filepath)
+                    fn () => DatabaseOperation::loadSqlFromPath($filepath, null)
                 );
 
                 $this->components->task(
@@ -66,7 +66,7 @@ class ImportDatabaseCommand extends Command
         return self::FAILURE;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
 
         $this->addArgument('file', InputArgument::OPTIONAL, 'The SQL file to import.', 'mysql.database.sql');
