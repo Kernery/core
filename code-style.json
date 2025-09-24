@@ -1,7 +1,38 @@
 {
     "preset": "laravel",
     "rules": {
-        "blank_line_before_statement": true,
+        "blank_line_after_namespace": true,
+        "blank_line_after_opening_tag": true,
+        "blank_line_before_statement": {
+            "statements": [
+                "case",
+                "continue",
+                "declare",
+                "default",
+                "do",
+                "exit",
+                "for",
+                "foreach",
+                "goto",
+                "if",
+                "return",
+                "switch",
+                "throw",
+                "try",
+                "while",
+                "yield",
+                "yield_from"
+            ]
+        },
+        "blank_line_between_import_groups": true,
+        "class_attributes_separation": {
+            "elements": {
+                "const": "one",
+                "method": "one",
+                "property": "one",
+                "trait_import": "one"
+            }
+        },
         "concat_space": {
             "spacing": "one"
         },
@@ -9,6 +40,7 @@
         "single_trait_insert_per_statement": true,
         "types_spaces": {
             "space": "single"
-        }
+        },
+        "single_blank_line_at_eof": true
     }
 }

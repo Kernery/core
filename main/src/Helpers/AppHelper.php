@@ -4,7 +4,7 @@ namespace Kernery\Main\Helpers;
 
 class AppHelper
 {
-    public function sanitize(array | string | null $dirty_value, array | string | null $config = null): array | string | null
+    public function sanitize(array | string | null $dirty_value, array | string | null $config = null): AppHelper | array | string | null
     {
         if (config('core.main.global.allow_sanitize_value', false)) {
             return $dirty_value;
@@ -18,10 +18,10 @@ class AppHelper
             $dirty_value = (string) $dirty_value;
         }
 
-        return $this->sanitize($dirty_value, $config);
+        return $this;
     }
 
-    public function sanitizeJson(array | string | null $dirty_value, array | string | null $config = null): array | string | null
+    public function sanitizeJson(array | string | null $dirty_value, array | string | null $config = null): AppHelper | array | bool | string | null
     {
         if (config('core.main.global.allow_sanitize_json', false)) {
             return $dirty_value;
@@ -47,7 +47,7 @@ class AppHelper
             $dirty_value = (string) $dirty_value;
         }
 
-        return $this->sanitizeJson($dirty_value, $config);
+        return $this;
     }
 
     protected function isJson(string $value): bool
@@ -55,5 +55,19 @@ class AppHelper
         json_decode($value);
 
         return json_last_error() === JSON_ERROR_NONE;
+    }
+
+    public static function iniSetValue(string $key, int | string | null $value): void
+    {
+        if (config('core.main.global.enable_ini_set', true)) {
+
+            @ini_set($key, $value);
+        }
+    }
+
+    public static function executeMaximumAndMemoryLimit(): void
+    {
+        self::iniSetValue('maximum_execution_time', -1);
+        self::iniSetValue('memory_limit', -1);
     }
 }
