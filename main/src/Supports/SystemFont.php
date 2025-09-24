@@ -2,4 +2,4 @@
 
 namespace Kernery\Main\Supports;
 
-class AppFont {}
+class SystemFont {}

@@ -5,6 +5,7 @@ namespace Kernery\Main\Commands;
 use Exception;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Attribute\AsCommand;
+
 use function Laravel\Prompts\text;
 
 #[AsCommand('kernery:font:load', 'Fetch fonts and download them on the storage disk.')]
