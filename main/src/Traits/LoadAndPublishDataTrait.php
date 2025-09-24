@@ -15,7 +15,7 @@ trait LoadAndPublishDataTrait
     {
         $this->namespace = ltrim(rtrim($namespace, '/'), '/');
 
-        $this->app['config']->set(['core.global.plugin_' . File::basename($this->getPath()) => $namespace . '_namespace']);
+        $this->app['config']->set(['core.main.global.plugin_' . File::basename($this->getPath()) => $namespace . '_namespace']);
 
         return $this;
     }
@@ -26,7 +26,7 @@ trait LoadAndPublishDataTrait
 
         $moduleDirectory = str_replace('/src/Providers', '', File::dirname($reflectionClass->getFilename()));
 
-        if (! Str::contains($moduleDirectory, base_path('core/plugins'))) {
+        if (! Str::contains($moduleDirectory, base_path('source/plugins'))) {
 
             $moduleDirectory = base_path('source/' . $this->getDashedNamespace());
         }
@@ -112,7 +112,7 @@ trait LoadAndPublishDataTrait
         $this->loadTranslationsFrom($this->getTranslationsPath(), $this->getDashedNamespace());
         $this->publishes(
             [$this->getTranslationsPath() => lang_path('vendor/' . $this->getDashedNamespace())],
-            'cms-lang'
+            'kernery-lang'
         );
 
         return $this;

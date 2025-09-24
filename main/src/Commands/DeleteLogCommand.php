@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand('kernery:log:clear', 'Clears all log files within the storag/logs')]
+#[AsCommand('kernery:log:clear', 'Clear all log files within the storag/logs')]
 class DeleteLogCommand extends Command
 {
     public function handle(Filesystem $filesystem): int
@@ -21,7 +21,7 @@ class DeleteLogCommand extends Command
 
         if (empty($allLogs)) {
 
-            $this->components->info('❌ No logs file found');
+            $this->components->info('No logs file found');
 
             return self::SUCCESS;
 
@@ -36,7 +36,7 @@ class DeleteLogCommand extends Command
             }
         });
 
-        $this->components->info('✅ Deleted log files successfully!');
+        $this->components->info('✔ Deleted log files successfully!');
 
         return self::SUCCESS;
 

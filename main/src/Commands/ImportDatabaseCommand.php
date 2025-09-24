@@ -9,7 +9,9 @@ use Kernery\Main\Helpers\AppHelper;
 use Kernery\Main\Services\FlushCacheService;
 use Kernery\Main\Supports\DatabaseOperation;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Attribute\AsCommand;
 
+#[AsCommand('kernery:db:import', 'Import database from SQL file in path.')]
 class ImportDatabaseCommand extends Command
 {
     public function handle()
