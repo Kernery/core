@@ -12,12 +12,14 @@ class HookAction extends ActionHookEvent
 
         foreach ($this->getListeners() as $hook => $listeners) {
             krsort($listeners);
+
             foreach ($listeners as $arguments) {
                 if ($hook !== $action) {
                     continue;
                 }
 
                 $parameters = [];
+
                 for ($index = 0; $index < $arguments['arguments']; $index++) {
                     if (isset($args[$index])) {
                         $parameters[] = $args[$index];
