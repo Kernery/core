@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\Process\Process;
+use Symfony\Component\Console\Attribute\AsCommand;
 
 use function Laravel\Prompts\confirm;
 
@@ -37,7 +38,7 @@ class ExportDatabaseCommand extends Command
                         sprintf($shellCommand, $getDbConfig['username'], $getDbConfig['password'], $getDbConfig['host'], $getDbConfig['port'], $getDbConfig['database'], $sqlPath)
                     )->mustRun();
 
-                    $this->components->info('✅ Exported database to SQL file.');
+                    $this->components->info('✔ Exported database to SQL file.');
 
                     return self::SUCCESS;
 
@@ -51,7 +52,7 @@ class ExportDatabaseCommand extends Command
                         sprintf($shellCommand, $getDbConfig['username'], $getDbConfig['password'], $getDbConfig['host'], $getDbConfig['port'], $getDbConfig['database'], $sqlPath)
                     )->mustRun();
 
-                    $this->components->info('✅ Exported database to SQL file.');
+                    $this->components->info('✔ Exported database to SQL file.');
 
                     return self::SUCCESS;
 
@@ -65,7 +66,7 @@ class ExportDatabaseCommand extends Command
                         sprintf($shellCommand, $getDbConfig['username'], $getDbConfig['password'], $getDbConfig['host'], $getDbConfig['port'], $getDbConfig['database'], $sqlPath)
                     )->mustRun();
 
-                    $this->components->info('✅ Exported database to SQL file.');
+                    $this->components->info('✔ Exported database to SQL file.');
 
                     return self::SUCCESS;
             }

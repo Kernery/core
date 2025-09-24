@@ -9,7 +9,7 @@ use Symfony\Component\Console\Attribute\AsCommand;
 
 use function Laravel\Prompts\confirm;
 
-#[AsCommand('kernery:app:refresh', 'Cleanup all records from the database except core system records needed to keep the app running.')]
+#[AsCommand('kernery:app:refresh', 'Cleanup all records from the database except the core system records that is needed to keep the app running.')]
 class RefreshAppCommand extends Command
 {
     public function handle(RefreshDatabaseService $refreshDatabaseService): int
@@ -22,7 +22,7 @@ class RefreshAppCommand extends Command
 
             $this->components->task('Refreshing DB...', fn () => $refreshDatabaseService->executeService());
 
-            $this->components->info('✅ Database refresh sucessful');
+            $this->components->info('✔ Database refresh sucessful');
 
         } catch (Exception $exception) {
 
