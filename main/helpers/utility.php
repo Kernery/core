@@ -35,6 +35,6 @@ if (! function_exists('module_path')) {
 if (! function_exists('db_path')) {
     function db_path(?string $path = null): string
     {
-        return source_path('db' . ($path ? DIRECTORY_SEPARATOR . ltrim($path, DIRECTORY_SEPARATOR) : ''));
+        return source_path('database' . ($path ? DIRECTORY_SEPARATOR . ltrim($path, DIRECTORY_SEPARATOR) : ''));
     }
 }
