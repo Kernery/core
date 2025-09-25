@@ -1,14 +1,5 @@
 <?php
 
-const CORE_V = '0.1.0';
-
-if (! function_exists('app_core_version')) {
-    function app_core_version(): string
-    {
-        return self::CORE_V;
-    }
-}
-
 if (! function_exists('source_path')) {
     function source_path(?string $path = null): string
     {

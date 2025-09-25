@@ -71,7 +71,7 @@ class ExportDatabaseCommand extends Command
                     return self::SUCCESS;
             }
 
-            $this->components->error(sprintf('The driver [%s] does not support.', $dbDriver));
+            $this->components->error(sprintf('The driver [%s] does not support exporting.', $dbDriver));
 
             return self::FAILURE;
 

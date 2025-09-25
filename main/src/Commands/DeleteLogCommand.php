@@ -17,6 +17,7 @@ class DeleteLogCommand extends Command
 
             return self::FAILURE;
         }
+
         $allLogs = $filesystem->allFiles($logDirectory);
 
         if (empty($allLogs)) {
