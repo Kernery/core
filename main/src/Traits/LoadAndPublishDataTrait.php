@@ -5,7 +5,7 @@ namespace Kernery\Main\Traits;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Kernery\Main\Supports\Helper;
+use Kernery\Main\Supports\UtilHelper;
 use ReflectionClass;
 
 trait LoadAndPublishDataTrait
@@ -164,7 +164,7 @@ trait LoadAndPublishDataTrait
 
     protected function loadHelpers(): self
     {
-        Helper::autoload($this->getPath('/helpers'));
+        UtilHelper::autoload($this->getPath('/helpers'));
 
         return $this;
     }
