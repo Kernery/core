@@ -5,8 +5,8 @@ namespace Kernery\Main\Commands;
 use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\Process\Process;
 use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Process\Process;
 
 use function Laravel\Prompts\confirm;
 
@@ -71,7 +71,7 @@ class ExportDatabaseCommand extends Command
                     return self::SUCCESS;
             }
 
-            $this->components->error(sprintf('The driver [%s] does not support.', $dbDriver));
+            $this->components->error(sprintf('The driver [%s] does not support exporting.', $dbDriver));
 
             return self::FAILURE;
 

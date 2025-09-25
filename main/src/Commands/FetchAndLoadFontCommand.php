@@ -4,15 +4,15 @@ namespace Kernery\Main\Commands;
 
 use Exception;
 use Illuminate\Console\Command;
+use Symfony\Component\Console\Attribute\AsCommand;
 
 use function Laravel\Prompts\text;
-use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand('kernery:font:load', 'Fetch fonts and download them on the storage disk.')]
 
 class FetchAndLoadFontCommand extends Command
 {
-    public function handle()
+    public function handle(): int
     {
         $appFont = text(
             label: 'Font URL',
@@ -24,7 +24,7 @@ class FetchAndLoadFontCommand extends Command
 
         try {
 
-            app('core.app-fonts')->load($appFont, forceDownload: true);
+            app('core.load-app-fonts')->load($appFont, forceDownload: true);
 
         } catch (Exception $exception) {
 
